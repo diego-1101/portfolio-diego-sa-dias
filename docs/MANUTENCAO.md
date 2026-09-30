@@ -28,6 +28,9 @@ Além disso, revise o portfólio a cada três meses para remover links quebrados
   year: "2026—atual",
   status: "em andamento",
   title: "Título público do projeto",
+  image: "assets/images/projects/nome-do-projeto.webp",
+  imageAlt: "O que aparece na imagem, sem interpretar resultados.",
+  imageCaption: "Registro do projeto · ano",
   summary: "Explique o problema, a abordagem e o objetivo em duas ou três frases.",
   areas: ["Área 1", "Área 2", "Ferramenta"],
   contributions: [
@@ -49,6 +52,9 @@ Além disso, revise o portfólio a cada três meses para remover links quebrados
 - prefira resumo com problema e contribuição, não uma lista de tecnologias;
 - mantenha de duas a cinco áreas;
 - use no máximo três contribuições curtas;
+- coloque uma imagem em `assets/images/projects/` e preencha `image`, `imageAlt` e `imageCaption`;
+- prefira uma captura, figura ou fotografia do próprio trabalho; se usar uma imagem conceitual, deixe isso claro na legenda;
+- para fotografias e capturas, exporte em WebP com cerca de 1600 px de largura; para esquemas vetoriais, use SVG;
 - só inclua links públicos e testados;
 - não publique dados de participantes, pacientes, credenciais ou resultados sob embargo;
 - se um projeto não tiver link público, use `links: []`.

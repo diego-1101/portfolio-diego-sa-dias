@@ -28,6 +28,18 @@
       const card = element("article", `project-card reveal${project.featured ? " project-card-featured" : ""}`);
       card.dataset.projectId = project.id;
 
+      if (project.image) {
+        const media = element("figure", "project-media");
+        const picture = element("img");
+        picture.src = project.image;
+        picture.alt = project.imageAlt || "";
+        picture.loading = "lazy";
+        picture.decoding = "async";
+        media.append(picture);
+        if (project.imageCaption) media.append(element("figcaption", "project-media-caption", project.imageCaption));
+        card.append(media);
+      }
+
       const top = element("div", "project-topline");
       top.append(element("span", "project-number", String(index + 1).padStart(2, "0")));
       const meta = element("div", "project-meta");
@@ -39,9 +51,14 @@
       card.append(element("h3", "project-title", project.title));
       card.append(element("p", "project-summary", project.summary));
 
-      const contributions = element("ul", "project-contributions");
-      project.contributions.forEach((item) => contributions.append(element("li", "", item)));
-      card.append(contributions);
+      if (project.contributions.length) {
+        const detail = element("details", "project-detail");
+        detail.append(element("summary", "", "Método e contribuição"));
+        const contributions = element("ul", "project-contributions");
+        project.contributions.forEach((item) => contributions.append(element("li", "", item)));
+        detail.append(contributions);
+        card.append(detail);
+      }
 
       const footer = element("div", "project-footer");
       const tags = element("ul", "tag-list");
@@ -90,31 +107,6 @@
     list.append(fragment);
   }
 
-  function setupReveal() {
-    const items = document.querySelectorAll(".reveal");
-    if (!items.length) return;
-
-    if (!("IntersectionObserver" in window)) {
-      items.forEach((item) => item.classList.add("is-visible"));
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -24px" }
-    );
-
-    items.forEach((item) => observer.observe(item));
-  }
-
   renderProjects();
   renderOutputs();
-  setupReveal();
 })();

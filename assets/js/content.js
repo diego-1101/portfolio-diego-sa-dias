@@ -5,6 +5,9 @@ window.PORTFOLIO_CONTENT = {
       year: "2024—atual",
       status: "em andamento",
       title: "Interface cérebro-máquina híbrida para controle de prótese virtual",
+      image: "assets/images/projects/prothese-vr.webp",
+      imageAlt: "Captura do ambiente de realidade virtual do projeto, com avatar sentado e feedback do movimento da perna.",
+      imageCaption: "Ambiente experimental em realidade virtual · projeto em andamento",
       summary: "Validação de um protocolo não invasivo que combina EEG e EMG por meio de padrões corticomusculares para controlar uma prótese de membro inferior em realidade virtual.",
       areas: ["EEG", "EMG", "Coerência", "Unity", "Machine Learning"],
       contributions: [
@@ -26,6 +29,9 @@ window.PORTFOLIO_CONTENT = {
       year: "2023—2024",
       status: "concluído",
       title: "Machine learning para controle de prótese mioelétrica",
+      image: "assets/images/projects/classificacao.webp",
+      imageAlt: "Figura de avaliação de classificadores produzida na linha de pesquisa atual, com matrizes de confusão e estabilidade temporal.",
+      imageCaption: "Visual da linha de classificação · trabalho recente",
       summary: "Iniciação científica dedicada à comparação de técnicas de aprendizagem de máquina para classificar sinais eletromiográficos de flexão e extensão do joelho em tempo real.",
       areas: ["EMG", "Classificação", "SVM", "Redes neurais"],
       contributions: [
@@ -43,6 +49,9 @@ window.PORTFOLIO_CONTENT = {
       year: "2024—2025",
       status: "concluído",
       title: "EEG, desempenho e estimulação vibrotátil",
+      image: "assets/images/projects/eeg-vibrotatil.svg",
+      imageAlt: "Esquema ilustrativo de traçados e bandas de EEG relacionados à análise de desempenho, sem dados medidos.",
+      imageCaption: "Esquema do método · ilustração",
       summary: "Trabalho de conclusão em Engenharia Biomédica sobre relações multivariadas entre potência espectral de EEG e desempenho em tarefas guiadas por estimulação vibrotátil.",
       areas: ["EEG", "Potência espectral", "Análise multivariada", "Vibrotátil"],
       contributions: [

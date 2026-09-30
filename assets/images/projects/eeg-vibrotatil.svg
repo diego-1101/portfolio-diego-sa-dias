@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" role="img" aria-labelledby="title desc">
+  <title id="title">Esquema de análise de EEG e desempenho</title>
+  <desc id="desc">Diagrama conceitual com traçados de EEG, bandas de frequência e desempenho em tarefa vibrotátil; não representa dados medidos.</desc>
+  <rect width="1000" height="680" fill="#d8d8cf"/>
+  <g fill="none" stroke="#bbc0b9" stroke-width="1">
+    <path d="M60 170H940M60 270H940M60 370H940M60 470H940M60 570H940"/>
+    <path d="M150 110V580M260 110V580M370 110V580M480 110V580M590 110V580M700 110V580M810 110V580M920 110V580"/>
+  </g>
+  <text x="60" y="75" fill="#263c40" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="3">EEG / POTÊNCIA ESPECTRAL</text>
+  <text x="60" y="626" fill="#263c40" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="3">ESTÍMULO VIBROTÁTIL</text>
+  <path d="M60 277 L105 277 L122 267 L135 293 L151 243 L167 299 L187 275 L226 275 L247 259 L263 297 L279 270 L320 270 L340 279 L361 251 L378 290 L396 276 L443 276 L465 267 L483 301 L502 247 L520 282 L561 282 L587 267 L607 293 L628 270 L670 270 L692 281 L712 254 L734 297 L756 276 L805 276 L825 263 L847 292 L868 273 L940 273" fill="none" stroke="#aa523e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 398 C98 398 101 346 139 346 S180 398 220 398 S261 346 300 346 S340 398 379 398 S420 346 460 346 S499 398 540 398 S580 346 620 346 S659 398 700 398 S740 346 780 346 S819 398 860 398 S900 346 940 346" fill="none" stroke="#345d70" stroke-width="5"/>
+  <path d="M60 517 C115 517 120 466 176 466 S236 517 293 517 S354 466 411 466 S470 517 528 517 S587 466 645 466 S704 517 762 517 S822 466 881 466 S918 500 940 500" fill="none" stroke="#77754a" stroke-width="5"/>
+  <g fill="#263c40" font-family="Arial,sans-serif" font-size="18" font-weight="700">
+    <text x="60" y="215">SINAL</text><text x="60" y="335">BANDA 1</text><text x="60" y="455">BANDA 2</text>
+  </g>
+</svg>

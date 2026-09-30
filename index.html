@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#071116" />
+    <meta name="theme-color" content="#151616" />
     <meta
       name="description"
       content="Portfólio acadêmico de Diego de Sá Dias: neuroengenharia, interfaces cérebro-máquina, EEG, EMG, machine learning e realidade virtual."
@@ -11,7 +11,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23071116'/%3E%3Cpath d='M4 17h5l2-7 4 14 3-10 2 3h8' fill='none' stroke='%235eead4' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23151616'/%3E%3Ctext x='5' y='23' fill='%23f1ece3' font-family='Georgia' font-size='20'%3EDS%3C/text%3E%3C/svg%3E"
     />
     <title>Diego de Sá Dias — Portfólio acadêmico</title>
     <script>document.documentElement.classList.add("js");</script>
@@ -34,55 +34,45 @@
       </nav>
 
       <div class="header-contact" aria-label="Contatos rápidos">
-        <a href="mailto:diego.sa.dias11@gmail.com">E-mail</a>
-        <a href="https://www.linkedin.com/in/engenheiro-diego-de-sa-dias" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:diego.sa.dias11@gmail.com" aria-label="Enviar e-mail para Diego"><img src="assets/icons/gmail.svg" alt="" /> <span>E-mail</span></a>
+        <a href="https://www.linkedin.com/in/engenheiro-diego-de-sa-dias" target="_blank" rel="noreferrer" aria-label="Abrir LinkedIn de Diego"><img src="assets/icons/linkedin.svg" alt="" /> <span>LinkedIn</span></a>
       </div>
     </header>
 
     <main id="conteudo">
       <section class="hero section-shell" aria-labelledby="hero-title">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span>Engenheiro biomédico · pesquisador CNPq</p>
-          <h1 id="hero-title">Sinais biológicos.<br /><em>Movimento com intenção.</em></h1>
+          <p class="eyebrow">Diego de Sá Dias <span aria-hidden="true">/</span> Portfólio acadêmico</p>
+          <h1 id="hero-title">Entre o cérebro<br />e o <em>movimento.</em></h1>
           <p class="hero-summary">
-            Investigo como sinais de EEG e EMG podem tornar o controle de próteses e os protocolos de reabilitação mais naturais, combinando neuroengenharia, análise de dados, machine learning e realidade virtual.
+            Sou engenheiro biomédico e mestrando na UNIFESP. Trabalho com EEG, EMG e realidade virtual para investigar novas formas de controlar próteses e apoiar a reabilitação.
           </p>
 
           <div class="hero-actions" aria-label="Links de contato e perfis">
-            <a class="button button-primary" href="mailto:diego.sa.dias11@gmail.com">diego.sa.dias11@gmail.com</a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/engenheiro-diego-de-sa-dias" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="contact-tile" href="mailto:diego.sa.dias11@gmail.com"><img src="assets/icons/gmail.svg" alt="" /><span><small>Escreva para mim</small><strong>diego.sa.dias11@gmail.com</strong></span><span class="tile-arrow" aria-hidden="true">↗</span></a>
+            <a class="contact-tile" href="https://www.linkedin.com/in/engenheiro-diego-de-sa-dias" target="_blank" rel="noreferrer"><img src="assets/icons/linkedin.svg" alt="" /><span><small>Vamos conversar</small><strong>LinkedIn</strong></span><span class="tile-arrow" aria-hidden="true">↗</span></a>
           </div>
 
           <div class="profile-links" aria-label="Perfis acadêmicos e técnicos">
-            <a href="http://lattes.cnpq.br/0442024321574103" target="_blank" rel="noreferrer">Currículo Lattes</a>
-            <a href="https://github.com/diego-1101" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="http://lattes.cnpq.br/0442024321574103" target="_blank" rel="noreferrer"><img src="assets/icons/lattes.svg" alt="" /> Currículo Lattes</a>
+            <a href="https://github.com/diego-1101" target="_blank" rel="noreferrer"><img src="assets/icons/github.svg" alt="" /> GitHub</a>
             <span>São José dos Campos, SP</span>
           </div>
         </div>
 
-        <aside class="hero-portrait reveal" aria-label="Perfil e formação atual">
+        <figure class="hero-portrait reveal">
           <div class="portrait-frame">
             <img src="assets/images/diego-profile.png" alt="Retrato de Diego de Sá Dias" width="270" height="480" />
-            <div class="portrait-caption">
-              <span>UNIFESP</span>
-              <span>Mestrado em Engenharia Biomédica</span>
-            </div>
           </div>
-
-          <ol class="signal-chain" aria-label="Fluxo principal da pesquisa">
-            <li><span>01</span><strong>EEG</strong><small>atividade cortical</small></li>
-            <li><span>02</span><strong>EMG</strong><small>atividade muscular</small></li>
-            <li><span>03</span><strong>Modelo</strong><small>análise e classificação</small></li>
-            <li><span>04</span><strong>Prótese virtual</strong><small>controle e feedback</small></li>
-          </ol>
-        </aside>
+          <figcaption class="portrait-caption"><strong>Diego de Sá Dias</strong><span>Laboratório de Neuroengenharia e Neurocognição · UNIFESP</span></figcaption>
+        </figure>
       </section>
 
       <section class="research-band" aria-labelledby="research-title">
         <div class="section-shell research-layout">
           <div class="section-heading reveal">
-            <p class="section-index">01 / Pesquisa</p>
-            <h2 id="research-title">Na fronteira entre intenção neural e movimento</h2>
+            <p class="section-index">Pesquisa atual</p>
+            <h2 id="research-title">Da atividade cerebral ao gesto.</h2>
           </div>
 
           <div class="research-copy reveal">
@@ -104,11 +94,6 @@
 
       <section class="lab-section section-shell" aria-labelledby="lab-title">
         <div class="lab-card reveal">
-          <div class="lab-signal" aria-hidden="true">
-            <svg viewBox="0 0 520 120" role="presentation">
-              <path d="M0 65h76l12-6 10 12 12-50 18 91 17-66 15 19h50l11-9 11 17 19-34 17 26h52l10-8 15 15 20-48 17 78 19-57 13 20h88" />
-            </svg>
-          </div>
           <div>
             <p class="section-index">Laboratório</p>
             <h2 id="lab-title">Neuroengenharia e Neurocognição · UNIFESP</h2>
@@ -123,10 +108,10 @@
       <section class="projects-section section-shell" id="projetos" aria-labelledby="projects-title">
         <div class="section-heading section-heading-row reveal">
           <div>
-            <p class="section-index">02 / Projetos</p>
-            <h2 id="projects-title">Estante de pesquisa</h2>
+            <p class="section-index">Projetos</p>
+            <h2 id="projects-title">Trabalhos em foco</h2>
           </div>
-          <p>Projetos organizados como módulos: problema, método, contribuição e referências em um mesmo lugar.</p>
+          <p>Pesquisa em desenvolvimento, experiências anteriores e as imagens que ajudam a contar cada etapa.</p>
         </div>
 
         <div class="project-shelf" id="projects-grid" aria-live="polite"></div>
@@ -137,7 +122,7 @@
         <div class="section-shell">
           <div class="section-heading section-heading-row reveal">
             <div>
-              <p class="section-index">03 / Produções</p>
+              <p class="section-index">Produções</p>
               <h2 id="outputs-title">Publicações e apresentações</h2>
             </div>
             <p>Registros acadêmicos com autoria, evento e acesso à fonte quando disponível.</p>
@@ -149,8 +134,8 @@
 
       <section class="education-section section-shell" id="formacao" aria-labelledby="education-title">
         <div class="section-heading reveal">
-          <p class="section-index">04 / Formação</p>
-          <h2 id="education-title">Uma trajetória construída em camadas</h2>
+          <p class="section-index">Formação</p>
+          <h2 id="education-title">O caminho até aqui</h2>
         </div>
 
         <ol class="education-timeline reveal">
@@ -176,10 +161,11 @@
       <section class="contact-section section-shell" id="contato" aria-labelledby="contact-title">
         <div class="contact-panel reveal">
           <p class="section-index">Contato direto</p>
-          <h2 id="contact-title">Quer conversar sobre neuroengenharia, sinais biológicos ou colaboração em pesquisa?</h2>
+          <h2 id="contact-title">Vamos conversar?</h2>
+          <p>Pesquisa cresce em diálogo. Se você quer trocar ideias sobre neuroengenharia, sinais biológicos ou colaboração, estou por aqui.</p>
           <div class="contact-lines">
-            <a href="mailto:diego.sa.dias11@gmail.com">diego.sa.dias11@gmail.com</a>
-            <a href="https://www.linkedin.com/in/engenheiro-diego-de-sa-dias" target="_blank" rel="noreferrer">linkedin.com/in/engenheiro-diego-de-sa-dias</a>
+            <a href="mailto:diego.sa.dias11@gmail.com"><img src="assets/icons/gmail.svg" alt="" /> E-mail <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/engenheiro-diego-de-sa-dias" target="_blank" rel="noreferrer"><img src="assets/icons/linkedin.svg" alt="" /> LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>

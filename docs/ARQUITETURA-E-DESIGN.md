@@ -41,9 +41,9 @@ O público principal é formado por bancas, pesquisadores, possíveis colaborado
 
 ### Página acadêmica (`index.html`)
 
-1. **Cabeçalho fixo e compacto** — nome, navegação entre “Acadêmico” e “Profissional” e contatos principais.
+1. **Cabeçalho compacto** — nome, navegação entre “Acadêmico” e “Profissional” e contatos principais com ícones reconhecíveis.
 2. **Abertura** — nome, formação, campo de atuação, uma síntese pessoal e links de e-mail/LinkedIn visíveis no primeiro quadro.
-3. **Foco de pesquisa** — explicação breve da investigação atual e mapa das tecnologias que conectam EEG, EMG, análise, machine learning e realidade virtual.
+3. **Foco de pesquisa** — explicação breve da investigação atual e das tecnologias que conectam EEG, EMG, análise, machine learning e realidade virtual.
 4. **Laboratório** — contexto do Laboratório de Neuroengenharia e Neurocognição da UNIFESP, sem atribuir estrutura ou resultados não confirmados.
 5. **Projetos** — estante visual gerada por JavaScript a partir de um catálogo padronizado.
 6. **Produções** — resumo publicado em anais e apresentações de trabalho, com links externos quando confirmados.
@@ -68,8 +68,17 @@ portfolio-diego-sa-dias/
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
+│   ├── icons/
+│   │   ├── gmail.svg
+│   │   ├── linkedin.svg
+│   │   ├── github.svg
+│   │   └── lattes.svg
 │   ├── images/
-│   │   └── diego-profile.png
+│   │   ├── diego-profile.png
+│   │   └── projects/
+│   │       ├── prothese-vr.webp
+│   │       ├── classificacao.webp
+│   │       └── eeg-vibrotatil.svg
 │   └── js/
 │       ├── content.js
 │       └── main.js
@@ -86,9 +95,9 @@ portfolio-diego-sa-dias/
 ### Responsabilidades
 
 - `index.html` e `profissional.html`: estrutura semântica e conteúdo editorial estável;
-- `styles.css`: tokens visuais, layout, responsividade, estados e animação;
+- `styles.css`: tokens visuais, layout, responsividade e estados;
 - `content.js`: catálogo editável de projetos e produções;
-- `main.js`: renderização dos catálogos, filtros leves e melhorias progressivas;
+- `main.js`: renderização dos catálogos;
 - `docs/`: decisões, publicação e rotina de manutenção.
 
 Se o JavaScript falhar, a apresentação, a formação, o laboratório e os contatos continuam disponíveis. Apenas os catálogos dinâmicos deixam de ser preenchidos.
@@ -103,6 +112,9 @@ Cada projeto será um objeto no array `projects` de `assets/js/content.js`:
   year: "2024—atual",
   status: "em andamento",
   title: "Título público do projeto",
+  image: "assets/images/projects/imagem-do-projeto.webp",
+  imageAlt: "Descrição objetiva da imagem.",
+  imageCaption: "Origem e contexto da figura",
   summary: "Resumo de duas ou três frases.",
   areas: ["EEG", "EMG", "Machine Learning"],
   contributions: ["Contribuição 1", "Contribuição 2"],
@@ -120,7 +132,9 @@ Regras:
 - `summary` descreve o problema e a contribuição, não uma lista de ferramentas;
 - `areas` tem de duas a cinco entradas curtas;
 - `links` aceita zero ou mais referências verificadas;
-- `featured: true` dá destaque editorial sem alterar o componente.
+- `image` aponta para um arquivo local; a legenda deve dizer se é registro do projeto, figura de outra etapa da linha ou ilustração;
+- `imageAlt` descreve o que está visível e informa quando um gráfico é apenas conceitual;
+- `featured` fica disponível para destaque futuro, sem alterar a ordem dos projetos nesta versão.
 
 Produções seguem uma estrutura semelhante, com `type`, `year`, `title`, `authors`, `venue`, `doi` e `url`. O visual é criado pelo mesmo renderizador, portanto novos itens entram na grade sem duplicar HTML.
 
@@ -128,43 +142,43 @@ Produções seguem uma estrutura semelhante, com `type`, `year`, `title`, `autho
 
 ### Tese
 
-**Caderno de laboratório noturno com precisão de instrumentação.** A página combina superfícies azul-grafite, tipografia sóbria, linhas finas e um traço de sinal elétrico. O resultado deve parecer desenhado para um pesquisador de neuroengenharia, não um template genérico de portfólio.
+**Portfólio acadêmico em linguagem editorial.** A página usa fundo carvão, texto marfim, acento cobre, tipografia serifada e imagens ligadas ao trabalho do Diego. A hierarquia vem de fotografia, figuras de pesquisa, espaço e linhas finas. Os contatos precisam ser reconhecidos imediatamente pelos ícones de Gmail e LinkedIn.
 
-### Decisão memorável
+### Decisão de imagem
 
-O primeiro quadro usa uma coluna de “sinal” que conecta EEG → EMG → modelo → prótese virtual. Na estante, os projetos recebem numeração grande e uma linha de base contínua, como módulos organizados em uma bancada. O recurso é abstrato e informativo, não uma ilustração decorativa.
+- o retrato pessoal aparece sem efeitos luminosos e, no celular, em um recorte quadrado discreto;
+- cada projeto começa com uma imagem e uma legenda de proveniência;
+- a captura de realidade virtual é um registro do projeto em andamento;
+- a figura de classificadores vem da linha de pesquisa recente e é identificada como tal;
+- o esquema de EEG é explicitamente uma ilustração, sem números ou resultados inventados;
+- as imagens ficam no repositório para funcionar no GitHub Pages sem depender de serviços de terceiros.
 
 ### Tokens
 
-- fundo principal: `#071116`;
-- superfícies: `#0c1a21` e `#10252d`;
-- texto principal: `#f2f7f5`;
-- texto secundário: `#9fb1b5`;
-- acento: ciano elétrico `#5eead4`;
-- acento secundário: azul `#67a7ff`;
-- linhas: branco com 12% de opacidade;
-- cantos: discretos, entre 2 e 16 px conforme a função;
-- sombra: rara e difusa; hierarquia deve vir principalmente de contraste, espaço e bordas.
+- fundo principal: `#151616`;
+- superfícies: `#1d1f1e` e `#252725`;
+- texto principal: `#f1ece3`;
+- texto secundário: `#adafa9`;
+- acento: cobre `#d49b72`;
+- linhas: `#393b38`;
+- cantos retos e sem sombras decorativas.
 
 ### Tipografia
 
-- interface e texto: `Aptos`, `Segoe UI Variable`, `Segoe UI`, `system-ui`;
-- destaques editoriais: `Georgia` apenas em frases curtas e itálicas;
-- corpo mínimo de 1 rem, metadados nunca abaixo de 0,75 rem;
+- interface e texto: `Segoe UI`, `Arial`, sans-serif;
+- títulos editoriais: `Iowan Old Style`, `Palatino Linotype`, `Book Antiqua`, `Georgia`;
 - títulos com largura controlada e entrelinha compacta.
 
 ### Movimento
 
-- entrada sutil de seções quando entram na área visível;
-- deslocamento máximo de 12 px e duração curta;
-- cartões respondem ao foco/hover sem saltos de layout;
-- `prefers-reduced-motion` desliga todas as transições não essenciais.
+- apenas respostas sutis ao hover e foco, sem elementos ocultos até entrar na tela;
+- `prefers-reduced-motion` reduz as transições.
 
 ## 7. Comportamento responsivo
 
-- **desktop (≥ 1024 px):** abertura em duas colunas, projetos em duas colunas e navegação completa;
-- **tablet (720–1023 px):** abertura equilibrada e cartões empilhados quando necessário;
-- **mobile (< 720 px):** cabeçalho rolável horizontalmente, contatos em largura total, foto reduzida e todos os catálogos em uma coluna;
+- **desktop (≥ 1050 px):** abertura em duas colunas e projetos em três colunas;
+- **tablet (761–1049 px):** projetos em duas colunas;
+- **mobile (≤ 760 px):** projetos em uma coluna, contatos empilhados em telas estreitas e retrato quadrado compacto;
 - nenhum conteúdo depende de hover;
 - links e botões têm área mínima de toque próxima de 44 px;
 - o site não deve gerar rolagem horizontal em 320 px.

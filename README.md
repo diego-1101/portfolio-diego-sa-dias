@@ -7,7 +7,7 @@ Portfólio acadêmico estático, criado para apresentações, networking cientí
 - modo acadêmico como página principal;
 - modo profissional preparado para uma segunda etapa;
 - contatos diretos no primeiro quadro;
-- projetos e produções renderizados a partir de um catálogo único;
+- projetos com imagens, legendas de origem e produções renderizados a partir de um catálogo único;
 - visual noturno responsivo e acessível;
 - publicação simples no GitHub Pages, sem dependências ou etapa de build.
 

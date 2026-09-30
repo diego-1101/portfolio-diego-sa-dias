@@ -30,6 +30,14 @@ Este arquivo registra de onde vieram as informações da primeira versão e redu
 - confirma a atuação do laboratório com realidade virtual, estimulação vibrotátil, reabilitação e prótese virtual;
 - página: <https://dci.unifesp.br/assessoria-de-imprensa-e-jornalismo/releases/r-realidade-virtual-associada-a-estimulacao-vibro-tatil-e-usada-para-reabilitacao-de-pessoas-com-amputacao>.
 
+## Imagens usadas no portfólio
+
+- retrato: `assets/images/diego-profile.png`, proveniente do perfil fornecido pelo autor;
+- captura de realidade virtual: `protocolo_graz/images/classe_4_direita90.png`, convertida para `assets/images/projects/prothese-vr.webp`;
+- matriz de classificação: recorte de `lsl_tests/pseudo_online/reports/pseudo_online_medium_fisher_cmc_svm_linear_20260923/performance_audit.png`, convertido para `assets/images/projects/classificacao.webp`. É uma figura da linha recente de classificação, não um resultado atribuído à iniciação científica de 2023–2024;
+- diagrama de EEG: `assets/images/projects/eeg-vibrotatil.svg`, esquema conceitual sem dados medidos;
+- ícones de contato: SVGs locais em `assets/icons/`, construídos para indicar os destinos dos links.
+
 ## Regra de precedência
 
 Para formação e produção acadêmica, use primeiro o Lattes mais recente. Use o LinkedIn para contatos e contexto profissional. Confirme DOI, ISBN e dados de publicação na página oficial do periódico, evento ou repositório.
