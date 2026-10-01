@@ -30,6 +30,75 @@
     return [...items].sort((a, b) => dateRank(b) - dateRank(a));
   }
 
+  function projectGallery(project) {
+    if (Array.isArray(project.gallery)) return project.gallery.filter((item) => item && item.src);
+    if (project.image) {
+      return [{ src: project.image, alt: project.imageAlt || "", caption: project.imageCaption || "" }];
+    }
+    return [];
+  }
+
+  function renderProjectGallery(project) {
+    const images = projectGallery(project);
+    if (!images.length) return null;
+
+    const figure = element("figure", "project-media");
+    figure.setAttribute("aria-label", `Imagens do projeto: ${project.title}`);
+    figure.setAttribute("aria-roledescription", "galeria");
+    const stage = element("div", "project-media-stage");
+    const image = element("img");
+    image.src = images[0].src;
+    image.alt = images[0].alt || "";
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.draggable = false;
+    stage.append(image);
+
+    let caption;
+    let counter;
+    let position = 0;
+
+    function showImage(nextPosition) {
+      position = (nextPosition + images.length) % images.length;
+      const current = images[position];
+      image.src = current.src;
+      image.alt = current.alt || "";
+      if (caption) caption.textContent = current.caption || "";
+      if (counter) counter.textContent = `${String(position + 1).padStart(2, "0")} / ${String(images.length).padStart(2, "0")}`;
+    }
+
+    if (images.length > 1) {
+      const previous = element("button", "gallery-arrow gallery-arrow-previous", "‹");
+      previous.type = "button";
+      previous.setAttribute("aria-label", `Imagem anterior de ${project.title}`);
+      previous.addEventListener("click", () => showImage(position - 1));
+
+      const next = element("button", "gallery-arrow gallery-arrow-next", "›");
+      next.type = "button";
+      next.setAttribute("aria-label", `Próxima imagem de ${project.title}`);
+      next.addEventListener("click", () => showImage(position + 1));
+
+      stage.append(previous, next);
+    }
+
+    figure.append(stage);
+    if (images.length > 1 || images[0].caption) {
+      const meta = element("figcaption", "project-gallery-meta");
+      if (images[0].caption) {
+        caption = element("span", "project-media-caption", images[0].caption);
+        meta.append(caption);
+      }
+      if (images.length > 1) {
+        counter = element("span", "gallery-counter", `01 / ${String(images.length).padStart(2, "0")}`);
+        counter.setAttribute("aria-live", "polite");
+        counter.setAttribute("aria-atomic", "true");
+        meta.append(counter);
+      }
+      figure.append(meta);
+    }
+    return figure;
+  }
+
   function renderProjects() {
     const grid = document.querySelector("#projects-grid");
     if (!grid || !content) return;
@@ -40,17 +109,8 @@
       const card = element("article", `project-card reveal${project.featured ? " project-card-featured" : ""}`);
       card.dataset.projectId = project.id;
 
-      if (project.image) {
-        const media = element("figure", "project-media");
-        const picture = element("img");
-        picture.src = project.image;
-        picture.alt = project.imageAlt || "";
-        picture.loading = "lazy";
-        picture.decoding = "async";
-        media.append(picture);
-        if (project.imageCaption) media.append(element("figcaption", "project-media-caption", project.imageCaption));
-        card.append(media);
-      }
+      const gallery = renderProjectGallery(project);
+      if (gallery) card.append(gallery);
 
       const top = element("div", "project-topline");
       top.append(element("span", "project-number", String(index + 1).padStart(2, "0")));

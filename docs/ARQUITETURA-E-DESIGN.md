@@ -76,7 +76,7 @@ portfolio-diego-sa-dias/
 │   ├── images/
 │   │   ├── diego-profile.png
 │   │   └── projects/
-│   │       ├── prothese-vr.webp
+│   │       ├── prothese-vr-*.webp
 │   │       ├── classificacao.webp
 │   │       └── eeg-vibrotatil.svg
 │   └── js/
@@ -112,9 +112,13 @@ Cada projeto será um objeto no array `projects` de `assets/js/content.js`:
   year: "2024—atual",
   status: "em andamento",
   title: "Título público do projeto",
-  image: "assets/images/projects/imagem-do-projeto.webp",
-  imageAlt: "Descrição objetiva da imagem.",
-  imageCaption: "Origem e contexto da figura",
+  gallery: [
+    {
+      src: "assets/images/projects/imagem-do-projeto.webp",
+      alt: "Descrição objetiva da imagem.",
+      caption: "Origem e contexto da figura"
+    }
+  ],
   summary: "Resumo de duas ou três frases.",
   areas: ["EEG", "EMG", "Machine Learning"],
   contributions: ["Contribuição 1", "Contribuição 2"],
@@ -133,8 +137,9 @@ Regras:
 - `summary` descreve o problema e a contribuição, não uma lista de ferramentas;
 - `areas` tem de duas a cinco entradas curtas;
 - `links` aceita zero ou mais referências verificadas;
-- `image` aponta para um arquivo local; a legenda deve dizer se é registro do projeto, figura de outra etapa da linha ou ilustração;
-- `imageAlt` descreve o que está visível e informa quando um gráfico é apenas conceitual;
+- `gallery` é uma lista ordenada de imagens locais; cada item tem `src`, `alt` e `caption`;
+- os controles de navegação aparecem quando há duas ou mais imagens; arquivos GIF animados funcionam pelo elemento de imagem do navegador;
+- `alt` descreve o que está visível e informa quando um gráfico é apenas conceitual;
 - `featured` fica disponível para destaque futuro, sem alterar a ordem dos projetos nesta versão.
 
 Produções seguem uma estrutura semelhante, com `type`, `year`, `title`, `authors`, `venue`, `doi` e `url`. O visual é criado pelo mesmo renderizador, portanto novos itens entram na grade sem duplicar HTML.
@@ -148,7 +153,7 @@ Produções seguem uma estrutura semelhante, com `type`, `year`, `title`, `autho
 ### Decisão de imagem
 
 - o retrato pessoal aparece sem efeitos luminosos e, no celular, em um recorte quadrado discreto;
-- cada projeto começa com uma imagem e uma legenda de proveniência;
+- cada projeto começa com uma imagem ou galeria, com legenda de proveniência;
 - a captura de realidade virtual é um registro do projeto em andamento;
 - a figura de classificadores vem da linha de pesquisa recente e é identificada como tal;
 - o esquema de EEG é explicitamente uma ilustração, sem números ou resultados inventados;

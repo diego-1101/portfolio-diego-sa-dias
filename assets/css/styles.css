@@ -91,11 +91,19 @@ h1, h2, h3 { line-height: 1.07; }
 .section-heading-row > p { max-width: 27rem; color: var(--muted); font-size: .9rem; }
 .project-shelf { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .project-card { display: flex; min-width: 0; flex-direction: column; border: 1px solid var(--line); background: var(--surface); }
-.project-media { position: relative; overflow: hidden; margin: 0; border-bottom: 1px solid var(--line); background: #d3d4cd; }
-.project-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .3s ease; }
+.project-media { overflow: hidden; margin: 0; border-bottom: 1px solid var(--line); background: #d3d4cd; }
+.project-media-stage { position: relative; overflow: hidden; }
+.project-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .3s ease, opacity .2s ease; }
 .project-card:hover .project-media img { transform: scale(1.025); }
 .project-card[data-project-id="ml-protese-mioeletrica"] .project-media img { object-position: 50% 5%; }
-.project-media-caption { position: absolute; right: 0; bottom: 0; left: 0; padding: .42rem .75rem; color: #fcfaf5; background: rgba(18, 23, 24, .83); font-size: .61rem; letter-spacing: .02em; }
+.project-gallery-meta { display: flex; align-items: center; justify-content: space-between; gap: .75rem; min-height: 2.3rem; padding: .45rem .75rem; border-top: 1px solid rgba(21, 22, 22, .12); background: #e7e4dc; }
+.project-media-caption { color: #3e423f; font-size: .64rem; line-height: 1.35; }
+.gallery-counter { flex: none; color: #555952; font-size: .62rem; font-variant-numeric: tabular-nums; letter-spacing: .08em; }
+.gallery-arrow { position: absolute; top: 50%; z-index: 1; display: grid; width: 2.65rem; height: 2.65rem; place-items: center; padding: 0 0 .15rem; transform: translateY(-50%); border: 1px solid rgba(241, 236, 227, .72); border-radius: 50%; color: var(--paper); background: rgba(21, 22, 22, .68); font-family: Georgia, serif; font-size: 1.8rem; line-height: 1; cursor: pointer; transition: color .18s, border-color .18s, background .18s, opacity .18s; }
+.gallery-arrow:hover { border-color: var(--accent); color: var(--background); background: var(--accent); }
+.gallery-arrow:focus-visible { outline: 2px solid var(--paper); outline-offset: 3px; }
+.gallery-arrow-previous { left: .75rem; }
+.gallery-arrow-next { right: .75rem; }
 .project-topline { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1.5rem 1.4rem 1rem; }
 .project-number { color: var(--accent); font-family: "Iowan Old Style", Georgia, serif; font-size: 1.5rem; font-style: italic; line-height: 1; }
 .project-meta { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .4rem .85rem; color: var(--muted); font-size: .63rem; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }

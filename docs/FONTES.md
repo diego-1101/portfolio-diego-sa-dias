@@ -33,7 +33,7 @@ Este arquivo registra de onde vieram as informações da primeira versão e redu
 ## Imagens usadas no portfólio
 
 - retrato: `assets/images/diego-profile.png`, proveniente do perfil fornecido pelo autor;
-- captura de realidade virtual: `protocolo_graz/images/classe_4_direita90.png`, convertida para `assets/images/projects/prothese-vr.webp`;
+- capturas de realidade virtual: `protocolo_graz/images/classe_0_relaxado.png`, `classe_3_direita60.png` e `classe_4_direita90.png`, convertidas para WebP na galeria do projeto;
 - matriz de classificação: recorte de `lsl_tests/pseudo_online/reports/pseudo_online_medium_fisher_cmc_svm_linear_20260923/performance_audit.png`, convertido para `assets/images/projects/classificacao.webp`. É uma figura da linha recente de classificação, não um resultado atribuído à iniciação científica de 2023–2024;
 - diagrama de EEG: `assets/images/projects/eeg-vibrotatil.svg`, esquema conceitual sem dados medidos;
 - ícones de contato: SVGs locais em `assets/icons/`, construídos para indicar os destinos dos links.
