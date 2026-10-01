@@ -65,6 +65,7 @@ Além disso, revise o portfólio a cada três meses para remover links quebrados
 - use no máximo três contribuições curtas;
 - coloque cada arquivo em `assets/images/projects/` e adicione um objeto em `gallery` com `src`, `alt` e `caption`;
 - a ordem dos objetos é a ordem de navegação. Com duas ou mais imagens, setas aparecem no card; GIFs animados rodam diretamente;
+- opcionalmente, use `fit: "contain"` em diagramas panorâmicos para que apareçam por inteiro, sem corte;
 - prefira uma captura, figura ou fotografia do próprio trabalho; se usar uma imagem conceitual, deixe isso claro na legenda;
 - para fotografias e capturas, prefira WebP com cerca de 1600 px de largura; para animações, GIF ou WebP animado; para esquemas vetoriais, SVG;
 - só inclua links públicos e testados;
@@ -104,7 +105,7 @@ Os textos institucionais ficam em `index.html`. Pesquise pelo começo da frase q
 
 1. exporte uma imagem vertical em PNG ou JPEG;
 2. prefira pelo menos 600 × 800 px;
-3. substitua `assets/images/diego-profile.png` mantendo o nome;
+3. substitua `assets/images/diego-profile.webp` mantendo o nome;
 4. confira o recorte no desktop e no celular;
 5. altere o texto `alt` em `index.html` se a nova imagem exigir outra descrição.
 

@@ -32,10 +32,13 @@ Este arquivo registra de onde vieram as informações da primeira versão e redu
 
 ## Imagens usadas no portfólio
 
-- retrato: `assets/images/diego-profile.png`, proveniente do perfil fornecido pelo autor;
-- capturas de realidade virtual: `protocolo_graz/images/classe_0_relaxado.png`, `classe_3_direita60.png` e `classe_4_direita90.png`, convertidas para WebP na galeria do projeto;
-- matriz de classificação: recorte de `lsl_tests/pseudo_online/reports/pseudo_online_medium_fisher_cmc_svm_linear_20260923/performance_audit.png`, convertido para `assets/images/projects/classificacao.webp`. É uma figura da linha recente de classificação, não um resultado atribuído à iniciação científica de 2023–2024;
-- diagrama de EEG: `assets/images/projects/eeg-vibrotatil.svg`, esquema conceitual sem dados medidos;
+- retrato recente: fotografia fornecida pelo autor em 30/09/2026, convertida para `assets/images/diego-profile.webp`;
+- galeria do mestrado: dois GIFs de demonstração e uma imagem-resumo da pipeline EEG–EMG fornecidos pelo autor; animações convertidas para WebP animado para reduzir o tempo de carregamento, preservando a ordem e a duração dos quadros;
+- TCC sobre EEG e estimulação vibrotátil: figura de cinco painéis fornecida pelo autor, convertida para `assets/images/projects/tcc-eeg-vibrotatil.webp`; publicação vinculada ao registro no Repositório UNIFESP;
+- resultados da Iniciação Científica em EMG: imagem fornecida pelo autor, convertida para `assets/images/projects/ic-emg-resultados-modelos.webp` e exibida sem corte no card;
+- logos institucionais: marcas da ETEC Pedro Ferreira Alves e da UNIFESP fornecidas pelo autor, otimizadas em WebP com transparência preservada em `assets/images/institutions/`;
+- matriz de classificação anterior: recorte de `lsl_tests/pseudo_online/reports/pseudo_online_medium_fisher_cmc_svm_linear_20260923/performance_audit.png`, convertido para `assets/images/projects/classificacao.webp`; permanece como recurso no repositório, mas não é exibido nesse projeto;
+- imagem do TCC: `assets/images/projects/tcc-eeg-vibrotatil.webp`, figura experimental fornecida pelo autor e ligada à publicação no Repositório UNIFESP; o diagrama conceitual SVG anterior permanece no repositório, mas não é mais exibido no card do TCC;
 - ícones de contato: SVGs locais em `assets/icons/`, construídos para indicar os destinos dos links.
 
 ## Regra de precedência

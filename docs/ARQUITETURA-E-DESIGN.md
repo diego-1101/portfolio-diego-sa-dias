@@ -74,10 +74,17 @@ portfolio-diego-sa-dias/
 │   │   ├── github.svg
 │   │   └── lattes.svg
 │   ├── images/
-│   │   ├── diego-profile.png
+│   │   ├── diego-profile.webp
+│   │   ├── institutions/
+│   │   │   ├── etec-pedro-ferreira-alves.webp
+│   │   │   └── unifesp.webp
 │   │   └── projects/
-│   │       ├── prothese-vr-*.webp
+│   │       ├── mestrado-protocolo-inicial.webp
+│   │       ├── mestrado-pipeline-eeg-emg.webp
+│   │       ├── mestrado-experimento-eeg-vr.webp
+│   │       ├── ic-emg-resultados-modelos.webp
 │   │       ├── classificacao.webp
+│   │       ├── tcc-eeg-vibrotatil.webp
 │   │       └── eeg-vibrotatil.svg
 │   └── js/
 │       ├── content.js
@@ -116,7 +123,8 @@ Cada projeto será um objeto no array `projects` de `assets/js/content.js`:
     {
       src: "assets/images/projects/imagem-do-projeto.webp",
       alt: "Descrição objetiva da imagem.",
-      caption: "Origem e contexto da figura"
+      caption: "Origem e contexto da figura",
+      fit: "contain"
     }
   ],
   summary: "Resumo de duas ou três frases.",
@@ -137,7 +145,8 @@ Regras:
 - `summary` descreve o problema e a contribuição, não uma lista de ferramentas;
 - `areas` tem de duas a cinco entradas curtas;
 - `links` aceita zero ou mais referências verificadas;
-- `gallery` é uma lista ordenada de imagens locais; cada item tem `src`, `alt` e `caption`;
+- `gallery` é uma lista ordenada de imagens locais; cada item tem `src`, `alt`, `caption` e, opcionalmente, `fit: "contain"` para diagramas panorâmicos;
+- `kind` é opcional e identifica a modalidade do projeto (por exemplo, Iniciação Científica), além do estado em `status`;
 - os controles de navegação aparecem quando há duas ou mais imagens; arquivos GIF animados funcionam pelo elemento de imagem do navegador;
 - `alt` descreve o que está visível e informa quando um gráfico é apenas conceitual;
 - `featured` fica disponível para destaque futuro, sem alterar a ordem dos projetos nesta versão.

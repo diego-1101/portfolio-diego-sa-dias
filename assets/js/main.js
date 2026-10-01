@@ -52,6 +52,7 @@
     image.loading = "lazy";
     image.decoding = "async";
     image.draggable = false;
+    image.classList.toggle("is-contained", images[0].fit === "contain");
     stage.append(image);
 
     let caption;
@@ -63,6 +64,7 @@
       const current = images[position];
       image.src = current.src;
       image.alt = current.alt || "";
+      image.classList.toggle("is-contained", current.fit === "contain");
       if (caption) caption.textContent = current.caption || "";
       if (counter) counter.textContent = `${String(position + 1).padStart(2, "0")} / ${String(images.length).padStart(2, "0")}`;
     }
@@ -116,6 +118,7 @@
       top.append(element("span", "project-number", String(index + 1).padStart(2, "0")));
       const meta = element("div", "project-meta");
       meta.append(element("span", "project-year", project.year));
+      if (project.kind) meta.append(element("span", "project-kind", project.kind));
       meta.append(element("span", "project-status", project.status));
       top.append(meta);
 
