@@ -2,6 +2,8 @@
 
 O conteúdo que mais cresce — projetos e produções — está separado do HTML em `assets/js/content.js`. Assim, a manutenção normal consiste em copiar um objeto, alterar seus campos e testar.
 
+Projetos e produções são exibidos automaticamente do mais recente para o mais antigo. Em intervalos como `2024—2025`, o ano final define a posição; `atual` fica no topo. Itens do mesmo ano mantêm a ordem em que aparecem no arquivo. A formação em `index.html` continua em ordem manual.
+
 ## Rotina recomendada
 
 Faça uma revisão breve sempre que ocorrer um destes eventos:

@@ -129,6 +129,7 @@ Regras:
 
 - `id` não se repete e não contém espaços;
 - `year` é texto para aceitar intervalos e “atual”;
+- a exibição ordena projetos e produções pelo ano mais recente, com “atual” no topo;
 - `summary` descreve o problema e a contribuição, não uma lista de ferramentas;
 - `areas` tem de duas a cinco entradas curtas;
 - `links` aceita zero ou mais referências verificadas;

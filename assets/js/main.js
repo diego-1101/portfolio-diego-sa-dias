@@ -18,13 +18,25 @@
     return link;
   }
 
+  function dateRank(item) {
+    const period = String(item.year || "");
+    const years = (period.match(/\b(?:19|20)\d{2}\b/g) || []).map(Number);
+    const start = years[0] || 0;
+    const end = /atual|presente/i.test(period) ? 9999 : (years[years.length - 1] || 0);
+    return end * 10000 + start;
+  }
+
+  function newestFirst(items) {
+    return [...items].sort((a, b) => dateRank(b) - dateRank(a));
+  }
+
   function renderProjects() {
     const grid = document.querySelector("#projects-grid");
     if (!grid || !content) return;
 
     const fragment = document.createDocumentFragment();
 
-    content.projects.forEach((project, index) => {
+    newestFirst(content.projects).forEach((project, index) => {
       const card = element("article", `project-card reveal${project.featured ? " project-card-featured" : ""}`);
       card.dataset.projectId = project.id;
 
@@ -85,7 +97,7 @@
 
     const fragment = document.createDocumentFragment();
 
-    content.outputs.forEach((output, index) => {
+    newestFirst(content.outputs).forEach((output, index) => {
       const item = element("article", "output-item reveal");
       item.append(element("p", "output-year", output.year));
 
